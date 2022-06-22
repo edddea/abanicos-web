@@ -1,0 +1,314 @@
+body {
+    padding-top: 10px;
+    
+  }
+  
+  
+  h1{
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+    font-style: oblique;
+   
+    
+   }
+   
+ 
+  
+  h2{
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+    color: purple;
+    font-size: 40px;
+  
+  }
+  
+  h3{
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+    color: #333;
+  }
+  .jumbotron {
+   background-color: rgba(7, 95, 91, 0.274);
+   border-bottom: 5px solid rgb(2, 104, 99);
+   
+   
+  }
+
+ 
+
+
+
+
+
+
+  .page-header {
+    padding-bottom: 6px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid rgb(114, 46, 0);
+  }
+  
+  
+  .faq > .page-header {
+    padding-bottom: 6px;
+    margin: 60px 0 20px;
+    border-bottom: 1px solid rgb(114, 46, 0);
+  }
+  
+  .theme-dropdown .dropdown-menu {
+    position: static;
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  .theme-showcase > p > .btn {
+    margin: 5px 0;
+  }
+  
+  .theme-showcase .navbar .container {
+    width: auto;
+  } 
+  
+  .navbar-brand {
+    padding: 0px;
+   
+    
+  }
+  
+  .navbar-brand img {
+    height: 110%;
+    padding: 10px 15px;
+    width: auto;
+  }
+  .panel-footer {
+    margin-top: 30px;
+    background-color: rgb(120, 139, 155);
+    color: #fff;
+    font-size: 13px;
+    
+  }
+/*_________________________TEXTOS________________________________*/
+
+   
+  .banner{
+    background: linear-gradient(to right,  rgba(45, 213, 243, 0.493),rgba(217, 154, 253, 0.438));
+  }
+  .banner:hover{
+    background: linear-gradient(to right,rgba(217, 154, 253, 0.438), rgba(45, 213, 243, 0.493));
+  }
+
+  .subtema{
+    font-size: 3.7rem;
+    color:rgb(105, 48, 7);
+    text-align: center;
+    padding: 3rem;
+    padding-top: 50px;
+  }
+ 
+ 
+  
+  h3{
+    font-size: 1.7em;
+   
+    text-align: center;
+    background: rgb(221, 216, 216);
+   padding: 2em;
+   margin-top: 5rem;
+   color: rgb(150, 10, 10);
+   
+  }
+
+  
+ 
+.vari{
+  
+  color: #a6f34e;
+     
+}
+.caj{
+  color: rgb(145, 16, 16);
+  font-size: 2rem;
+  text-align: center;
+
+  
+
+
+}
+
+
+
+.albúm{
+  text-align: center;
+} 
+
+
+
+
+/*redes sociales*/
+.redes{
+ color: #257de2;
+}
+
+
+
+/*whattsapp bottom*/
+
+.float{
+	position:fixed;
+	width:50px;
+	height:48px;
+	bottom:40px;
+	right:20px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:25px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+.float:hover {
+	text-decoration: none;
+	color: #25d366;
+  background-color:#fff;
+}
+
+.my-float{
+	margin-top:13px;
+}
+
+.featurette-image{
+padding: 20PX;
+background-color: #c4c4c4;
+margin-top: 30PX;
+border-radius: 5PX;
+}
+
+/* nav-item dropdown
+  -------------------------------------------------- */
+  .dropdown-item{
+    color: #3b0c86;
+      font-size: 1.3em;
+     
+  }
+
+
+  #miBoton {
+    background: #e3f2fd;
+    border: none;
+    
+  }
+ 
+  /* RESPONSIVE CSS
+  -------------------------------------------------- */
+  
+  @media (min-width: 768px) {
+    /* Navbar positioning foo */
+    .navbar-wrapper {
+      margin-top: 20px;
+    }
+    .navbar-wrapper .container {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+    .navbar-wrapper .navbar {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  
+    /* The navbar becomes detached from the top, so we round the corners */
+    .navbar-wrapper .navbar {
+      border-radius: 4px;
+    }
+  
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+      margin-bottom: 20px;
+      font-size: 21px;
+      line-height: 1.4;
+    }
+  
+    .featurette-heading {
+      font-size: 50px;
+    }
+  
+    .first-heading {
+      font-size: 50px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .featurette-heading {
+      margin-top: 120px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .first-heading {
+      margin-top: 20px;
+    }
+  }
+  
+  .panel-heading > a,
+  .panel-title > small,
+  .panel-title > .small,
+  .panel-title > small > a,
+  .panel-title > .small > a {
+    color: white;
+  }
+  
+  .navbar-default .navbar-text {
+    color: #777;
+  }
+  .navbar-default .navbar-nav > li > a {
+    color: #3b0c86;
+    font-size: 1.3em;
+ font-family: Arial, Helvetica, sans-serif;
+  }
+  .navbar-default .navbar-nav > li > a:hover,
+  .navbar-default .navbar-nav > li > a:focus {
+    color: rgb(255, 255, 255);
+    background-color: #999999;
+    border-bottom: 4px solid rgba(0, 83, 65, 0.479);
+    border-radius: 20px;
+    
+  }
+  .navbar-default .navbar-nav > .active > a,
+  .navbar-default .navbar-nav > .active > a:hover,
+  .navbar-default .navbar-nav > .active > a:focus {
+    color: #333;
+    background-color: #e7e7e7;
+    font-weight: bold;
+    border-bottom: 2px solid rgba(0, 83, 65, 0.479);
+  }
+  .navbar-default .navbar-nav > .disabled > a,
+  .navbar-default .navbar-nav > .disabled > a:hover,
+  .navbar-default .navbar-nav > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+    font-weight: bold;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: #ddd;
+  }
+  .navbar-default .navbar-toggle:hover,
+  .navbar-default .navbar-toggle:focus {
+    background-color: #ddd;
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #888;
+  }
+  .navbar-default .navbar-collapse,
+  .navbar-default .navbar-form {
+    border-color: #e7e7e7;
+  }
+  .navbar-default .navbar-nav > .open > a,
+  .navbar-default .navbar-nav > .open > a:hover,
+  .navbar-default .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+  }
+  
+      
