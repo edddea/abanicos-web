@@ -66,6 +66,11 @@
       "src": "favicon-32x32.png",
       "type": "image/png",
       "sizes": "32x32"
+    },
+    {
+      "src": "favicon-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
     }
   ]
 }
