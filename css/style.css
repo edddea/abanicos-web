@@ -1,29 +1,27 @@
 body {
- 
     padding-top: 10px;
     background-color: rgb(238, 237, 237);
   }
-  
-  
+
+
   h1{
     font-weight: 300;
     line-height: 1;
     letter-spacing: -1px;
     font-style: oblique;
- 
    }
- 
- 
-  
+
+
+
   h2{
     font-weight: 300;
     line-height: 1;
     letter-spacing: -1px;
     color: purple;
     font-size: 40px;
-  
+
   }
-  
+
   h3{
     font-weight: 300;
     line-height: 1;
@@ -35,7 +33,7 @@ body {
 
 
  /* submenu-------------------------------------------------- */
- 
+
 
 
 
@@ -44,13 +42,13 @@ body {
 
 
   .jumbotron {
-  
+
    border-bottom: 5px solid rgb(2, 104, 99);
-   
-   
+
+
   }
 
- 
+
 
 
 
@@ -62,49 +60,49 @@ body {
     margin: 40px 0 20px;
     border-bottom: 1px solid rgb(114, 46, 0);
   }
-  
-  
+
+
   .faq > .page-header {
     padding-bottom: 6px;
     margin: 60px 0 20px;
     border-bottom: 1px solid rgb(114, 46, 0);
   }
-  
+
   .theme-dropdown .dropdown-menu {
     position: static;
     display: block;
     margin-bottom: 20px;
   }
-  
+
   .theme-showcase > p > .btn {
     margin: 5px 0;
   }
-  
+
   .theme-showcase .navbar .container {
     width: auto;
-  } 
-  
+  }
+
   .navbar-brand {
     padding: 0px;
-   
-    
+
+
   }
-  
+
   .navbar-brand img {
     height: 110%;
     padding: 10px 15px;
     width: auto;
-    
+
   }
-  
+
   .panel-footer {
     margin-top: 30px;
     background-color: rgb(120, 139, 155);
     color: #fff;
     font-size: 13px;
-    
+
   }
-  
+
   .lead {
     margin-top: 7px;
     margin-bottom: 0px;
@@ -114,21 +112,21 @@ body {
     font-family: cursive;
     border-radius: 10PX;
   }
-  
-  
+
+
   th{
     text-align: center;
   }
-  
-  
+
+
   /* MARKETING CONTENT
   -------------------------------------------------- */
- 
-  
+
+
   /* Featurettes
   ------------------------- */
-  
- 
+
+
 
   .featurette-image{
     padding: 5px;
@@ -137,37 +135,37 @@ body {
     border-right: 20px solid rgb(170, 169, 169);
     border-top: 20px solid rgb(170, 169, 169);
     border-radius: 50%;
-    
+
   }
    b{
     color: rgb(255, 0, 255);
    }
-  
+
   /* Thin out the marketing headings */
   .featurette-heading {
     font-weight: 300;
     line-height: 2;
     letter-spacing: -1px;
   }
-  
+
   .first-heading {
     font-weight: 300;
     line-height: 1;
     letter-spacing: -1px;
-   
+
   }
-  .album{
+  .album {
     margin-left: 20px;
+    margin-top: 10px;
     padding: 10px;
     background-color: rgb(170, 169, 169);
     border-radius: 20px;
-    
-
   }
+
   .services{
     padding-top: 20px;
-    
   }
+
  /*whattsapp bottom*/
 
  .float{
@@ -198,19 +196,24 @@ body {
 .dropdown-item{
   color: #3b0c86;
     font-size: 1.3em;
-   
+
 }
-  
+
 #miBoton {
   background: #e3f2fd;
   border: none;
-  
+
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
 }
 
 
   /* RESPONSIVE CSS
   -------------------------------------------------- */
-  
+
   @media (min-width: 768px) {
     /* Navbar positioning foo */
     .navbar-wrapper {
@@ -224,28 +227,28 @@ body {
       padding-right: 0;
       padding-left: 0;
     }
-  
+
     /* The navbar becomes detached from the top, so we round the corners */
     .navbar-wrapper .navbar {
       border-radius: 4px;
     }
-  
-    
+
+
   }
-  
+
   @media (min-width: 992px) {
     .featurette-heading {
       margin-top: 120px;
     }
   }
-  
+
   @media (min-width: 992px) {
     .first-heading {
       margin-top: 20px;
     }
   }
-  
-  
+
+
   .navbar-default .navbar-text {
     color: #777;
   }
@@ -261,8 +264,8 @@ body {
     border-bottom: 4px solid rgba(0, 83, 65, 0.479);
     border-radius: 20px;
 
-    
-  }  
+
+  }
   .navbar-default .navbar-nav > .active > a,
   .navbar-default .navbar-nav > .active > a:hover,
   .navbar-default .navbar-nav > .active > a:focus {
@@ -298,5 +301,3 @@ body {
     color: #555;
     background-color: #e7e7e7;
   }
-  
-      
