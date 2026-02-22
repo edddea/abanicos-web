@@ -3,379 +3,29 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#a78bfa" />
 
-  <title>Playeras y Blusas | Abanicos y Promocionales</title>
+  <title>Playeras | Abanicos y Promocionales</title>
   <link rel="canonical" href="https://abanicosypromocionales.com/playeras.html" />
-  <meta name="description" content="Playeras y blusas 100% algodón, varios modelos y colores. Serigrafía. Mayoreo a partir de 30 pzs." />
-  <meta name="keywords" content="playeras personalizadas, blusas personalizadas, serigrafía, 100% algodón, mayoreo playeras, impresión playeras" />
-  <meta name="theme-color" content="#0ea5e9" />
+  <meta name="description" content="Playeras y blusas personalizadas 100% algodón. Impresión en serigrafía y mayoreo." />
 
-  <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png" />
   <link rel="manifest" href="img/favicons/manifest.json" />
 
-  <!-- Tipografía -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root{
-      --bg: #0b1220;
-      --border: rgba(255,255,255,.10);
-      --text: rgba(255,255,255,.88);
-      --muted: rgba(255,255,255,.70);
-      --brand: #0ea5e9;
-      --brand2:#22c55e;
-      --shadow: 0 10px 30px rgba(0,0,0,.30);
-      --radius: 18px;
-      --max: 1120px;
-    }
-    *{ box-sizing:border-box; }
-    body{
-      margin:0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(1200px 600px at 20% 0%, rgba(14,165,233,.22), transparent 60%),
-        radial-gradient(900px 500px at 80% 10%, rgba(34,197,94,.18), transparent 60%),
-        var(--bg);
-    }
-    a{ color: inherit; text-decoration:none; }
-    a:hover{ text-decoration: underline; }
-    img{ max-width:100%; display:block; }
-
-    .container{
-      width: min(100% - 2rem, var(--max));
-      margin-inline:auto;
-    }
-
-    /* NAVBAR */
-    .nav{
-      position: sticky;
-      top:0;
-      z-index: 50;
-      backdrop-filter: blur(10px);
-      background: rgba(11,18,32,.65);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding: .9rem 0;
-      gap: 1rem;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:.7rem;
-      min-width: 180px;
-    }
-    .brand img{ height:42px; width:auto; }
-    .brand span{ font-weight:700; letter-spacing: .2px; white-space:nowrap; }
-
-    .menu{
-      display:flex;
-      gap: .9rem;
-      align-items:center;
-    }
-    .menu a{
-      padding:.55rem .75rem;
-      border-radius: 12px;
-      color: var(--muted);
-      font-weight: 600;
-      font-size: .95rem;
-    }
-    .menu a:hover{ background: rgba(255,255,255,.06); color: var(--text); text-decoration:none; }
-    .menu a.active{
-      background: rgba(255,255,255,.08);
-      color: var(--text);
-      border: 1px solid var(--border);
-    }
-
-    .cta{
-      display:flex;
-      gap:.6rem;
-      align-items:center;
-    }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:.5rem;
-      padding:.62rem .9rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.06);
-      color: var(--text);
-      font-weight: 700;
-      text-decoration:none !important;
-    }
-    .btn:hover{ transform: translateY(-1px); box-shadow: var(--shadow); }
-    .btn-primary{
-      border-color: rgba(14,165,233,.35);
-      background: linear-gradient(135deg, rgba(14,165,233,.95), rgba(34,197,94,.85));
-      color: #07101d;
-    }
-
-    .burger{
-      display:none;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.05);
-      border-radius: 12px;
-      padding:.55rem .65rem;
-      cursor:pointer;
-      color: var(--text);
-    }
-
-    @media (max-width: 900px){
-      .menu, .cta{ display:none; }
-      .burger{ display:inline-flex; }
-      .drawer{
-        display:none;
-        border-top:1px solid var(--border);
-        padding: .8rem 0 1.1rem;
-      }
-      .drawer.open{ display:block; }
-      .drawer a{
-        display:block;
-        padding:.75rem .75rem;
-        border-radius: 14px;
-        color: var(--muted);
-        font-weight: 700;
-      }
-      .drawer a:hover{ background: rgba(255,255,255,.06); color: var(--text); text-decoration:none; }
-      .drawer .row{ display:grid; gap:.35rem; }
-      .drawer .drawer-cta{ display:grid; gap:.5rem; margin-top:.75rem; }
-    }
-
-    /* PAGE */
-    main{ padding: 1.4rem 0 1.8rem; }
-
-    .page-hero{
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.05);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-      display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      margin-bottom: 1.2rem;
-    }
-    @media (max-width: 900px){
-      .page-hero{ grid-template-columns: 1fr; }
-    }
-    .page-hero .content{ padding: 1.25rem 1.25rem 1.15rem; }
-    .kicker{
-      margin:0 0 .35rem;
-      color: var(--muted);
-      font-weight: 800;
-      letter-spacing: .2px;
-      font-size: .95rem;
-    }
-    h1{
-      margin:.1rem 0 .55rem;
-      font-size: clamp(1.6rem, 3vw, 2.4rem);
-      line-height: 1.08;
-      letter-spacing: -.5px;
-    }
-    .sub{
-      margin:0 0 .9rem;
-      color: var(--muted);
-      line-height: 1.55;
-      font-size: 1.02rem;
-    }
-    .hero-actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:.6rem;
-      margin-top: .2rem;
-    }
-    .page-hero .media{
-      min-height: 260px;
-      position: relative;
-    }
-    .page-hero .media img{
-      width:100%;
-      height:100%;
-      object-fit: cover;
-      filter: saturate(1.05) contrast(1.02);
-    }
-    .badge{
-      position:absolute;
-      left: 14px;
-      bottom: 14px;
-      background: rgba(7,16,29,.65);
-      border: 1px solid var(--border);
-      backdrop-filter: blur(8px);
-      padding: .6rem .75rem;
-      border-radius: 14px;
-      font-weight: 800;
-      font-size: .95rem;
-    }
-
-    /* CARDS / SPECS */
-    .section{ padding: .6rem 0 1.2rem; }
-    .section-title{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap:1rem;
-      margin: .4rem 0 .9rem;
-    }
-    .section-title h2{ margin:0; font-size: 1.25rem; letter-spacing: -.2px; }
-    .section-title p{ margin:0; color: var(--muted); font-weight:600; font-size: .95rem; }
-
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
-
-    .card{
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.05);
-      border-radius: var(--radius);
-      overflow:hidden;
-      box-shadow: 0 10px 24px rgba(0,0,0,.22);
-    }
-    .card-head{
-      padding: 1rem 1rem .85rem;
-      border-bottom: 1px solid rgba(255,255,255,.08);
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: .8rem;
-    }
-    .card-head h3{
-      margin:0;
-      font-size: 1.05rem;
-      letter-spacing: -.2px;
-    }
-    .chip{
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.06);
-      color: var(--muted);
-      font-weight: 800;
-      font-size: .85rem;
-      padding:.35rem .55rem;
-      border-radius: 999px;
-      white-space:nowrap;
-    }
-    .card-body{ padding: .9rem 1rem 1rem; }
-
-    .specs{
-      display:grid;
-      gap: .55rem;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-    .spec{
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap: 1rem;
-      padding: .55rem .65rem;
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 14px;
-      background: rgba(0,0,0,.12);
-    }
-    .spec b{ color: var(--text); }
-    .spec span{ color: var(--muted); text-align:right; }
-
-    .note{
-      margin-top: .9rem;
-      padding: .85rem 1rem;
-      border: 1px dashed rgba(34,197,94,.35);
-      background: rgba(34,197,94,.08);
-      border-radius: 16px;
-      color: rgba(255,255,255,.82);
-      font-weight: 650;
-      line-height: 1.5;
-    }
-
-    .big-cta{
-      margin-top: 1.1rem;
-      border:1px solid var(--border);
-      background: linear-gradient(135deg, rgba(14,165,233,.15), rgba(34,197,94,.12));
-      border-radius: var(--radius);
-      padding: 1rem;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    .big-cta p{
-      margin:0;
-      color: var(--muted);
-      font-weight: 650;
-      line-height: 1.45;
-    }
-    .big-cta strong{ color: var(--text); }
-
-    /* FOOTER */
-    footer{
-      margin-top: 1.6rem;
-      border-top:1px solid var(--border);
-      background: rgba(0,0,0,.18);
-    }
-    .footer-inner{
-      padding: 1.3rem 0 1.6rem;
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 1rem;
-    }
-    @media (max-width: 900px){ .footer-inner{ grid-template-columns:1fr; } }
-    .footer-inner p{ margin:.15rem 0; color: var(--muted); line-height: 1.55; }
-    .footer-inner strong{ color: var(--text); }
-    .footer-links{
-      display:flex;
-      gap:.6rem;
-      flex-wrap:wrap;
-      align-items:flex-start;
-      justify-content:flex-end;
-    }
-    @media (max-width: 900px){ .footer-links{ justify-content:flex-start; } }
-
-    /* WhatsApp floating */
-    .wa{
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 60;
-      width: 56px;
-      height: 56px;
-      border-radius: 999px;
-      display:grid;
-      place-items:center;
-      background: #25D366;
-      color: #06210f;
-      box-shadow: 0 18px 40px rgba(0,0,0,.35);
-      border: 1px solid rgba(255,255,255,.25);
-      text-decoration:none !important;
-      font-size: 20px;
-      font-weight: 900;
-    }
-    .wa:hover{ transform: translateY(-2px); filter: brightness(1.02); }
-    .sr-only{
-      position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
-    }
-  </style>
-
-  <!-- Si quieres GA4 después, te lo dejo abajo como comentario -->
+  <link rel="stylesheet" href="css/app.css" />
 </head>
 
 <body>
-  <!-- NAV -->
   <header class="nav" role="banner">
     <div class="container">
       <div class="nav-inner">
-        <a class="brand" href="index.html" aria-label="Ir al inicio">
+        <a class="brand" href="index.html">
           <img src="img/favicons/favicon-96x96.png" alt="Abanicos y Promocionales" />
           <span>Abanicos y Promocionales</span>
         </a>
@@ -390,17 +40,12 @@
         <div class="cta">
           <a class="btn" href="https://instagram.com/abanicosy_promocinales?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener">Instagram</a>
           <a class="btn" href="https://www.facebook.com/profile.php?id=100063236768738" target="_blank" rel="noopener">Facebook</a>
-          <a class="btn btn-primary" href="https://api.whatsapp.com/send/?phone=%2B5215547235550&text=Hola%2C%20quiero%20cotizar%20playeras%20y%20blusas%20por%20favor.&app_absent=0" target="_blank" rel="noopener">
-            Pedidos por WhatsApp
-          </a>
+          <a class="btn btn-primary" href="https://api.whatsapp.com/send/?phone=%2B5215547235550&text=Hola%2C%20quiero%20cotizar%20playeras%20por%20favor.&app_absent=0" target="_blank" rel="noopener">Cotizar</a>
         </div>
 
-        <button class="burger" id="burger" aria-expanded="false" aria-controls="drawer" aria-label="Abrir menú">
-          ☰
-        </button>
+        <button class="burger" id="burger" aria-expanded="false" aria-controls="drawer" aria-label="Abrir menú">☰</button>
       </div>
 
-      <!-- Drawer mobile -->
       <div class="drawer" id="drawer">
         <div class="row">
           <a href="index.html">Inicio</a>
@@ -411,118 +56,98 @@
         <div class="drawer-cta">
           <a class="btn" href="https://instagram.com/abanicosy_promocinales?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener">Instagram</a>
           <a class="btn" href="https://www.facebook.com/profile.php?id=100063236768738" target="_blank" rel="noopener">Facebook</a>
-          <a class="btn btn-primary" href="https://api.whatsapp.com/send/?phone=%2B5215547235550&text=Hola%2C%20quiero%20cotizar%20playeras%20y%20blusas%20por%20favor.&app_absent=0" target="_blank" rel="noopener">Pedidos por WhatsApp</a>
+          <a class="btn btn-primary" href="https://api.whatsapp.com/send/?phone=%2B5215547235550&text=Hola%2C%20quiero%20cotizar%20playeras%20por%20favor.&app_absent=0" target="_blank" rel="noopener">Cotizar</a>
         </div>
       </div>
     </div>
   </header>
 
   <main class="container" role="main">
-    <!-- PAGE HERO -->
-    <section class="page-hero" aria-label="Playeras y blusas">
-      <div class="content">
-        <p class="kicker">100% algodón • Serigrafía • Varios modelos</p>
+    <section class="header-card">
+      <div>
+        <p class="kicker">Algodón • Serigrafía</p>
         <h1>Playeras y blusas personalizadas</h1>
-        <p class="sub">
-          Playeras varios diseños y personalizadas. Modelos para <strong>hombre</strong> (cuello redondo y V, manga corta y larga)
-          y para <strong>mujer</strong> (varios modelos y colores).
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="https://api.whatsapp.com/send/?phone=%2B5215547235550&text=Hola%2C%20quiero%20cotizar%20playeras%20(%C2%BFhombre%20o%20mujer%3F)%20cantidad%20y%20tallas%20por%20favor.&app_absent=0" target="_blank" rel="noopener">
-            Cotizar ahora
-          </a>
-          <a class="btn" href="albúm_playeras.html">Ver modelos</a>
-        </div>
+        <p class="sub">Playeras varios diseños y personalizadas.</p>
       </div>
-
-      <div class="media">
-        <!-- Reuso de la imagen que ya usas en tu index -->
-        <img src="img/playera p.jpg" alt="Playeras personalizadas en serigrafía" />
-        <div class="badge">Mayoreo desde 30 pzs.</div>
+      <div class="actions">
+        <a class="btn" href="albúm_playeras.html">Ver álbum</a>
+        <a class="btn btn-primary" target="_blank" rel="noopener"
+           href="https://api.whatsapp.com/send/?phone=%2B5215547235550&text=Hola%2C%20quiero%20cotizar%20playeras.%20Cantidad%3A%20__%20Modelo%20(hombre/mujer)%3A%20__%20Tallas%3A%20__%20Fecha%3A%20__.&app_absent=0">
+          Cotizar
+        </a>
       </div>
     </section>
 
-    <!-- SPECS -->
-    <section class="section" aria-label="Características">
-      <div class="section-title">
-        <h2>Detalles</h2>
-        <p>Modelos, tallas y materiales</p>
+    <section class="grid" aria-label="Info playeras">
+      <div class="tile" style="cursor:default;">
+        <img src="img/playera%20p.jpg" alt="Playeras" loading="lazy">
+        <div class="caption">
+          <strong>Hombre</strong><br>
+          Cuello redondo / cuello V<br>
+          Manga corta y larga<br>
+          Varios colores
+        </div>
       </div>
 
-      <div class="grid">
-        <article class="card">
-          <div class="card-head">
-            <h3>Especificaciones</h3>
-            <span class="chip">Serigrafía</span>
-          </div>
-          <div class="card-body">
-            <ul class="specs">
-              <li class="spec"><b>Hombre</b><span>Cuello redondo y cuello V, manga corta y larga, varios colores</span></li>
-              <li class="spec"><b>Mujer</b><span>Varios modelos y colores</span></li>
-              <li class="spec"><b>Material</b><span>100% algodón</span></li>
-              <li class="spec"><b>Tallas</b><span>CH, M, G, XG</span></li>
-              <li class="spec"><b>Impresión</b><span>Serigrafía</span></li>
-            </ul>
+      <div class="tile" style="cursor:default;">
+        <img src="img/playera%207.jpg" alt="Blusas" loading="lazy">
+        <div class="caption">
+          <strong>Mujer</strong><br>
+          Varios modelos y colores
+        </div>
+      </div>
 
-            <div class="note">
-              Mayoreo a partir de <strong>30 pzs.</strong>
-            </div>
+      <div class="tile" style="cursor:default;">
+        <img src="img/playera%20%20(3).jpg" alt="Material" loading="lazy">
+        <div class="caption">
+          <strong>Material</strong><br>
+          100% algodón<br>
+          Tallas: CH, M, G, XG
+        </div>
+      </div>
 
-            <div class="big-cta" style="margin-top: 1rem;">
-              <p><strong>LUCE A LA MODA.</strong> Dime diseño + cantidad + tallas y te cotizo rápido.</p>
-              <a class="btn btn-primary" href="https://api.whatsapp.com/send/?phone=%2B5215547235550&text=Hola%2C%20quiero%20playeras%2Fblusas%20con%20serigraf%C3%ADa.%20Cantidad%3A%20__%20Tallas%3A%20__%20Modelo%20(hombre%2Fmujer)%3A%20__%20Colores%3A%20__.&app_absent=0" target="_blank" rel="noopener">
-                Cotizar por WhatsApp
-              </a>
-            </div>
-          </div>
-        </article>
+      <a class="tile" href="albúm_playeras.html" style="cursor:pointer;">
+        <img src="img/playera%20%20(1).jpg" alt="Álbum playeras" loading="lazy">
+        <div class="caption"><strong>Álbum</strong><br>Checa algunos modelos</div>
+      </a>
+    </section>
+
+    <section class="header-card" style="margin-top:1rem;">
+      <div>
+        <p class="kicker">Moda • Estilo</p>
+        <h1 style="font-size:1.25rem;margin-top:.15rem;">LUCE A LA MODA.</h1>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" target="_blank" rel="noopener"
+           href="https://api.whatsapp.com/send/?phone=%2B5215547235550&text=Hola%2C%20quiero%20cotizar%20playeras.%20Cantidad%3A%20__%20Modelo%3A%20__%20Tallas%3A%20__%20Fecha%3A%20__.&app_absent=0">
+          Pedir cotización
+        </a>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer role="contentinfo">
     <div class="container">
       <div class="footer-inner">
         <div>
           <p><strong>Abanicos y Promocionales S.A. de C.V.</strong></p>
-          <p>Ciudad Lago, Nezahualcoyotl, Estado de México</p>
-          <p>Correo: <a href="mailto:ci180785@gmail.com">ci180785@gmail.com</a></p>
+          <p>Colonia Progresista, Iztapalapa, Ciudad de México</p>
+          <p>Correo: <a href="mailto:ci180785@gmail.com">abanpromo@gmail.com</a></p>
         </div>
-        <div class="footer-links" aria-label="Enlaces">
+        <div class="footer-links">
           <a class="btn" href="https://instagram.com/abanicosy_promocinales?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener">Instagram</a>
           <a class="btn" href="https://www.facebook.com/profile.php?id=100063236768738" target="_blank" rel="noopener">Facebook</a>
-          <a class="btn btn-primary" href="https://api.whatsapp.com/send/?phone=%2B5215547235550&text=Hola%2C%20quiero%20cotizar%20playeras%20y%20blusas%20por%20favor.&app_absent=0" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-primary" href="https://api.whatsapp.com/send/?phone=%2B5215547235550&text=Hola%2C%20quiero%20cotizar%20playeras%20por%20favor.&app_absent=0" target="_blank" rel="noopener">WhatsApp</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- WhatsApp floating -->
-  <a class="wa" href="https://api.whatsapp.com/send/?phone=%2B5215547235550&text=Hola%2C%20quiero%20cotizar%20playeras%20y%20blusas%20por%20favor.&app_absent=0" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
-    <span class="sr-only">WhatsApp</span>
-    WA
+  <a class="wa" href="https://api.whatsapp.com/send/?phone=%2B5215547235550&text=Hola%2C%20quiero%20cotizar%20playeras%20por%20favor.&app_absent=0"
+     target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <span class="sr-only">WhatsApp</span>WA
   </a>
 
-  <script>
-    const burger = document.getElementById("burger");
-    const drawer = document.getElementById("drawer");
-    burger?.addEventListener("click", () => {
-      const isOpen = drawer.classList.toggle("open");
-      burger.setAttribute("aria-expanded", String(isOpen));
-    });
-  </script>
-
-  <!--
-  ✅ OPCIONAL: GA4 (recomendado en 2026)
-  Reemplaza G-XXXXXXXXXX por tu Measurement ID
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-  -->
+  <script src="js/app.js"></script>
 </body>
 </html>

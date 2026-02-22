@@ -3,407 +3,25 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#a78bfa" />
 
-  <title>Abanicos y Promocionales | Personalizados</title>
-  <link rel="canonical" href="https://abanicosypromocionales.com" />
-  <meta name="description" content="Abanicos de mano personalizados, bolsas de lona y playeras/blusas impresas. Serigrafía y sublimación en CDMX." />
-  <meta name="keywords" content="abanicos personalizados, abanicos de madera, abanicos publicitarios, bolsas de lona personalizadas, playeras serigrafía, blusas personalizadas" />
-  <meta name="theme-color" content="#0ea5e9" />
+  <title>Abanicos y Promocionales</title>
+  <link rel="canonical" href="https://abanicosypromocionales.com/" />
+  <meta name="description" content="Abanicos personalizados, bolsas de lona y playeras/blusas con impresión en serigrafía y sublimación." />
 
-  <!-- Open Graph (bonito para compartir) -->
-  <meta property="og:title" content="Abanicos y Promocionales" />
-  <meta property="og:description" content="Abanicos, bolsas y playeras personalizadas. Serigrafía y sublimación." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://abanicosypromocionales.com" />
-
-  <!-- Favicons (dejé tu set) -->
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png" />
   <link rel="manifest" href="img/favicons/manifest.json" />
 
-  <!-- Tipografía -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root{
-      --bg: #0b1220;
-      --card: rgba(255,255,255,.06);
-      --border: rgba(255,255,255,.10);
-      --text: rgba(255,255,255,.88);
-      --muted: rgba(255,255,255,.70);
-      --brand: #0ea5e9;   /* azul */
-      --brand2:#22c55e;   /* verde */
-      --shadow: 0 10px 30px rgba(0,0,0,.30);
-      --radius: 18px;
-      --max: 1120px;
-    }
-    *{ box-sizing:border-box; }
-    html,body{ height:100%; }
-    body{
-      margin:0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(1200px 600px at 20% 0%, rgba(14,165,233,.22), transparent 60%),
-        radial-gradient(900px 500px at 80% 10%, rgba(34,197,94,.18), transparent 60%),
-        var(--bg);
-    }
-    a{ color: inherit; text-decoration:none; }
-    a:hover{ text-decoration: underline; }
-    img{ max-width:100%; display:block; }
-
-    .container{
-      width: min(100% - 2rem, var(--max));
-      margin-inline:auto;
-    }
-
-    /* NAVBAR */
-    .nav{
-      position: sticky;
-      top:0;
-      z-index: 50;
-      backdrop-filter: blur(10px);
-      background: rgba(11,18,32,.65);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding: .9rem 0;
-      gap: 1rem;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:.7rem;
-      min-width: 180px;
-    }
-    .brand img{ height:42px; width:auto; }
-    .brand span{
-      font-weight:700;
-      letter-spacing: .2px;
-      white-space:nowrap;
-    }
-
-    .menu{
-      display:flex;
-      gap: .9rem;
-      align-items:center;
-    }
-    .menu a{
-      padding:.55rem .75rem;
-      border-radius: 12px;
-      color: var(--muted);
-      font-weight: 600;
-      font-size: .95rem;
-    }
-    .menu a:hover{
-      background: rgba(255,255,255,.06);
-      color: var(--text);
-      text-decoration:none;
-    }
-    .cta{
-      display:flex;
-      gap:.6rem;
-      align-items:center;
-    }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:.5rem;
-      padding:.62rem .9rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.06);
-      color: var(--text);
-      font-weight: 700;
-      box-shadow: none;
-      text-decoration:none !important;
-    }
-    .btn:hover{ transform: translateY(-1px); box-shadow: var(--shadow); }
-    .btn-primary{
-      border-color: rgba(14,165,233,.35);
-      background: linear-gradient(135deg, rgba(14,165,233,.95), rgba(34,197,94,.85));
-      color: #07101d;
-    }
-    .btn-primary:hover{ filter: brightness(1.05); }
-
-    /* Mobile menu */
-    .burger{
-      display:none;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.05);
-      border-radius: 12px;
-      padding:.55rem .65rem;
-      cursor:pointer;
-      color: var(--text);
-    }
-    .burger:focus{ outline: 2px solid rgba(14,165,233,.5); outline-offset: 2px; }
-
-    @media (max-width: 900px){
-      .menu, .cta{ display:none; }
-      .burger{ display:inline-flex; }
-      .drawer{
-        display:none;
-        border-top:1px solid var(--border);
-        padding: .8rem 0 1.1rem;
-      }
-      .drawer.open{ display:block; }
-      .drawer a{
-        display:block;
-        padding:.75rem .75rem;
-        border-radius: 14px;
-        color: var(--muted);
-        font-weight: 700;
-      }
-      .drawer a:hover{ background: rgba(255,255,255,.06); color: var(--text); text-decoration:none; }
-      .drawer .row{
-        display:grid;
-        gap:.35rem;
-      }
-      .drawer .row + .row{ margin-top:.6rem; }
-      .drawer .drawer-cta{
-        display:grid;
-        gap:.5rem;
-        margin-top:.75rem;
-      }
-    }
-
-    /* HERO */
-    .hero{
-      padding: 2.2rem 0 1.2rem;
-    }
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 1.4rem;
-      align-items:stretch;
-    }
-    @media (max-width: 900px){
-      .hero-grid{ grid-template-columns:1fr; }
-    }
-    .hero-card{
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.05);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-    }
-    .hero-content{
-      padding: 1.4rem 1.4rem 1.2rem;
-    }
-    .kicker{
-      color: var(--muted);
-      font-weight: 700;
-      letter-spacing:.25px;
-      font-size: .95rem;
-      margin:0 0 .35rem;
-    }
-    h1{
-      margin:.1rem 0 .65rem;
-      font-size: clamp(1.8rem, 3.6vw, 3rem);
-      line-height: 1.05;
-      letter-spacing: -.6px;
-    }
-    .sub{
-      margin:0 0 1.1rem;
-      color: var(--muted);
-      font-size: 1.05rem;
-      line-height: 1.5;
-    }
-    .hero-actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:.6rem;
-      margin-top: .2rem;
-    }
-
-    .hero-media{
-      position:relative;
-      min-height: 260px;
-    }
-    .hero-media img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      filter: saturate(1.05) contrast(1.02);
-    }
-    .hero-badge{
-      position:absolute;
-      left: 14px;
-      bottom: 14px;
-      background: rgba(7,16,29,.65);
-      border: 1px solid var(--border);
-      backdrop-filter: blur(8px);
-      padding: .6rem .75rem;
-      border-radius: 14px;
-      font-weight: 800;
-      font-size: .95rem;
-    }
-
-    /* SECTIONS */
-    .section{
-      padding: 1.6rem 0;
-    }
-    .section-title{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap:1rem;
-      margin-bottom: .9rem;
-    }
-    .section-title h2{
-      margin:0;
-      font-size: 1.35rem;
-      letter-spacing: -.2px;
-    }
-    .section-title p{
-      margin:0;
-      color: var(--muted);
-      font-weight:600;
-      font-size: .95rem;
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-    }
-    @media (max-width: 980px){
-      .grid{ grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 640px){
-      .grid{ grid-template-columns: 1fr; }
-    }
-
-    .card{
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.05);
-      border-radius: var(--radius);
-      overflow:hidden;
-      box-shadow: 0 10px 24px rgba(0,0,0,.22);
-      transition: transform .18s ease, box-shadow .18s ease;
-    }
-    .card:hover{ transform: translateY(-2px); box-shadow: var(--shadow); }
-    .card img{
-      width:100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .card-body{
-      padding: 1rem 1rem 1.05rem;
-    }
-    .card-body h3{
-      margin:.05rem 0 .35rem;
-      font-size: 1.05rem;
-      letter-spacing: -.2px;
-    }
-    .card-body p{
-      margin:0 0 .8rem;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-    .card-body .links{
-      display:flex;
-      gap:.6rem;
-      flex-wrap:wrap;
-    }
-
-    /* MINI GALLERY */
-    .mini{
-      display:grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 1rem;
-      align-items:stretch;
-    }
-    .mini img{
-      width:100%;
-      height: 260px;
-      object-fit: cover;
-      border-radius: var(--radius);
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.04);
-    }
-    .mini img:nth-child(2), .mini img:nth-child(3){ height: 260px; }
-    @media (max-width: 900px){
-      .mini{ grid-template-columns: 1fr; }
-      .mini img{ height: 240px; }
-    }
-
-    /* FOOTER */
-    footer{
-      margin-top: 1.6rem;
-      border-top:1px solid var(--border);
-      background: rgba(0,0,0,.18);
-    }
-    .footer-inner{
-      padding: 1.3rem 0 1.6rem;
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 1rem;
-    }
-    @media (max-width: 900px){
-      .footer-inner{ grid-template-columns:1fr; }
-    }
-    .footer-inner p{
-      margin:.15rem 0;
-      color: var(--muted);
-      line-height: 1.55;
-    }
-    .footer-inner strong{ color: var(--text); }
-    .footer-links{
-      display:flex;
-      gap:.6rem;
-      flex-wrap:wrap;
-      align-items:flex-start;
-      justify-content:flex-end;
-    }
-    @media (max-width: 900px){
-      .footer-links{ justify-content:flex-start; }
-    }
-
-    /* WhatsApp floating button */
-    .wa{
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 60;
-      width: 56px;
-      height: 56px;
-      border-radius: 999px;
-      display:grid;
-      place-items:center;
-      background: #25D366;
-      color: #06210f;
-      box-shadow: 0 18px 40px rgba(0,0,0,.35);
-      border: 1px solid rgba(255,255,255,.25);
-      text-decoration:none !important;
-      font-size: 26px;
-      font-weight: 900;
-    }
-    .wa:hover{ transform: translateY(-2px); filter: brightness(1.02); }
-    .sr-only{
-      position:absolute;
-      width:1px;height:1px;
-      padding:0;margin:-1px;
-      overflow:hidden;clip:rect(0,0,0,0);
-      white-space:nowrap;border:0;
-    }
-  </style>
-
-  <!-- Icono WhatsApp (sin font-awesome) -->
-  <script>
-    // nada aquí, solo para evitar bloqueos de CSP si luego metes scripts
-  </script>
+  <link rel="stylesheet" href="css/app.css" />
 </head>
 
 <body>
-  <!-- NAV -->
   <header class="nav" role="banner">
     <div class="container">
       <div class="nav-inner">
@@ -413,7 +31,7 @@
         </a>
 
         <nav class="menu" aria-label="Navegación principal">
-          <a href="index.html">Inicio</a>
+          <a class="active" href="index.html">Inicio</a>
           <a href="abanicos.html">Abanicos</a>
           <a href="bolsas.html">Bolsas</a>
           <a href="playeras.html">Playeras</a>
@@ -422,17 +40,14 @@
         <div class="cta">
           <a class="btn" href="https://instagram.com/abanicosy_promocinales?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener">Instagram</a>
           <a class="btn" href="https://www.facebook.com/profile.php?id=100063236768738" target="_blank" rel="noopener">Facebook</a>
-          <a class="btn btn-primary" href="https://api.whatsapp.com/send/?phone=%2B5215547235550&text&app_absent=0" target="_blank" rel="noopener">
-            Pedidos por WhatsApp
-          </a>
+          <a class="btn btn-primary"
+             href="https://api.whatsapp.com/send/?phone=%2B5215547235550&text=Hola%2C%20quiero%20cotizar%20por%20favor.&app_absent=0"
+             target="_blank" rel="noopener">Cotizar</a>
         </div>
 
-        <button class="burger" id="burger" aria-expanded="false" aria-controls="drawer" aria-label="Abrir menú">
-          ☰
-        </button>
+        <button class="burger" id="burger" aria-expanded="false" aria-controls="drawer" aria-label="Abrir menú">☰</button>
       </div>
 
-      <!-- Drawer mobile -->
       <div class="drawer" id="drawer">
         <div class="row">
           <a href="index.html">Inicio</a>
@@ -443,149 +58,132 @@
         <div class="drawer-cta">
           <a class="btn" href="https://instagram.com/abanicosy_promocinales?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener">Instagram</a>
           <a class="btn" href="https://www.facebook.com/profile.php?id=100063236768738" target="_blank" rel="noopener">Facebook</a>
-          <a class="btn btn-primary" href="https://api.whatsapp.com/send/?phone=%2B5215547235550&text&app_absent=0" target="_blank" rel="noopener">Pedidos por WhatsApp</a>
+          <a class="btn btn-primary"
+             href="https://api.whatsapp.com/send/?phone=%2B5215547235550&text=Hola%2C%20quiero%20cotizar%20por%20favor.&app_absent=0"
+             target="_blank" rel="noopener">Cotizar</a>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- HERO -->
   <main class="container" role="main">
-    <section class="hero" aria-label="Presentación">
-      <div class="hero-grid">
-        <div class="hero-card">
-          <div class="hero-content">
-            <p class="kicker">Personalizados en CDMX • Serigrafía y sublimación</p>
-            <h1>Abanicos, bolsas y playeras que sí se ven pro.</h1>
-            <p class="sub">
-              Fabricamos abanicos de mano (madera o plástico), bolsas de lona y playeras/blusas en varios modelos.
-              Ideales para eventos, recuerdos y promociones.
-            </p>
+    <!-- HERO split (como tu imagen 1) -->
+    <section class="hero-split" aria-label="Presentación">
+      <div class="header-card">
+        <p class="kicker">Personalizados en CDMX • Serigrafía y sublimación</p>
+        <h1>Abanicos, bolsas y<br>playeras que sí se ven pro.</h1>
+        <p class="sub">
+          Fabricamos abanicos de mano (madera o plástico), bolsas de lona y playeras/blusas en varios modelos.
+          Ideales para eventos, recuerdos y promociones.
+        </p>
 
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="https://api.whatsapp.com/send/?phone=%2B5215547235550&text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n%20por%20favor.&app_absent=0" target="_blank" rel="noopener">
-                Cotizar por WhatsApp
-              </a>
-              <a class="btn" href="abanicos.html">Ver abanicos</a>
-              <a class="btn" href="bolsas.html">Ver bolsas</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-card hero-media" aria-label="Imagen principal">
-          <img src="img/3G1.png" alt="Productos personalizados" />
-          <div class="hero-badge">Hecho a medida • Full color</div>
+        <div class="actions">
+          <a class="btn btn-primary" target="_blank" rel="noopener"
+             href="https://api.whatsapp.com/send/?phone=%2B5215547235550&text=Hola%2C%20quiero%20cotizar.%20Producto%3A%20__%20Cantidad%3A%20__%20Fecha%3A%20__.&app_absent=0">
+            Cotizar por WhatsApp
+          </a>
+          <a class="btn" href="abanicos.html">Ver abanicos</a>
+          <a class="btn" href="bolsas.html">Ver bolsas</a>
         </div>
       </div>
+
+      <!-- Tarjeta derecha con imagen (puedes cambiar el src por la foto que usabas en el mock) -->
+      <aside class="hero-media tile" aria-label="Hecho a medida">
+        <img src="img/abanico-7.png" alt="Abanico hecho a medida" loading="lazy">
+        <div class="chip">Hecho a medida • Full color</div>
+      </aside>
     </section>
 
-    <!-- PRODUCTS -->
-    <section class="section" aria-label="Categorías">
-      <div class="section-title">
-        <h2>Catálogo principal</h2>
-        <p>Elige categoría y mira modelos</p>
-      </div>
-
-      <div class="grid">
-        <article class="card">
-          <a href="abanicos.html" aria-label="Ir a Abanicos">
-            <img src="img/varios.jpg" alt="Abanicos personalizados" />
-          </a>
-          <div class="card-body">
-            <h3>Abanicos</h3>
-            <p>Para bodas, eventos y publicidad. Serigrafía y sublimación.</p>
-            <div class="links">
-              <a class="btn" href="abanicos.html">Ver catálogo</a>
-              <a class="btn" href="albúm_abanicos.html">Ver modelos</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <a href="bolsas.html" aria-label="Ir a Bolsas">
-            <img src="img/bolsa muro.jpg" alt="Bolsas de lona personalizadas" />
-          </a>
-          <div class="card-body">
-            <h3>Bolsas de lona</h3>
-            <p>Lona gruesa, varios modelos, personalizadas con serigrafía.</p>
-            <div class="links">
-              <a class="btn" href="bolsas.html">Ver catálogo</a>
-              <a class="btn" href="albúm_bolsas.html">Ver modelos</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <a href="playeras.html" aria-label="Ir a Playeras y blusas">
-            <img src="img/playera p.jpg" alt="Playeras y blusas personalizadas" />
-          </a>
-          <div class="card-body">
-            <h3>Playeras y blusas</h3>
-            <p>100% algodón, varios diseños, serigrafía para un acabado duradero.</p>
-            <div class="links">
-              <a class="btn" href="playeras.html">Ver catálogo</a>
-              <a class="btn" href="albúm_playeras.html">Ver modelos</a>
-            </div>
-          </div>
-        </article>
-      </div>
+    <!-- Catálogo principal -->
+    <section class="section-head">
+      <h2>Catálogo principal</h2>
+      <p>Elige categoría y mira modelos</p>
     </section>
 
-    <!-- OTHER SERVICES -->
-    <section class="section" aria-label="Otros servicios">
-      <div class="section-title">
-        <h2>Otros trabajos</h2>
-        <p>Pregunta por opciones y paquetes</p>
-      </div>
+    <section class="grid" aria-label="Catálogo">
+      <!-- Abanicos -->
+      <article class="tile" style="cursor:default;">
+        <img src="img/varios.jpg" alt="Abanicos" loading="lazy">
+        <div class="caption">
+          <strong>Abanicos</strong><br>
+          Para bodas, eventos y publicidad.<br>
+          Serigrafía y sublimación.
+          <div class="actions" style="margin-top:.9rem;">
+            <a class="btn btn-secondary" href="abanicos.html">Ver catálogo</a>
+            <a class="btn" href="albúm_abanicos.html">Ver modelos</a>
+          </div>
+        </div>
+      </article>
 
-      <div class="mini">
-        <img src="img/varill (1).jpeg" alt="Detalle de varillaje" loading="lazy" />
-        <img src="img/cajitas a.jpg" alt="Empaques y cajitas" loading="lazy" />
-        <img src="img/varill (2).jpeg" alt="Varillaje y acabados" loading="lazy" />
-      </div>
+      <!-- Bolsas -->
+      <article class="tile" style="cursor:default;">
+        <img src="img/bolsas%20(1).jpg" alt="Bolsas de lona" loading="lazy">
+        <div class="caption">
+          <strong>Bolsas de lona</strong><br>
+          Lona gruesa, varios modelos,<br>
+          personalizadas con serigrafía.
+          <div class="actions" style="margin-top:.9rem;">
+            <a class="btn btn-secondary" href="bolsas.html">Ver catálogo</a>
+            <a class="btn" href="albúm_bolsas.html">Ver modelos</a>
+          </div>
+        </div>
+      </article>
 
-      <div style="margin-top: 1rem; display:flex; justify-content:center;">
-        <a class="btn btn-primary" href="https://api.whatsapp.com/send/?phone=%2B5215547235550&text=Hola%2C%20me%20interesan%20otros%20servicios%2C%20%C2%BFme%20das%20informes%3F&app_absent=0" target="_blank" rel="noopener">
+      <!-- Playeras -->
+      <article class="tile" style="cursor:default;">
+        <img src="img/playera%20p.jpg" alt="Playeras y blusas" loading="lazy">
+        <div class="caption">
+          <strong>Playeras y blusas</strong><br>
+          100% algodón, varios diseños, serigrafía<br>
+          para un acabado duradero.
+          <div class="actions" style="margin-top:.9rem;">
+            <a class="btn btn-secondary" href="playeras.html">Ver catálogo</a>
+            <a class="btn" href="albúm_playeras.html">Ver modelos</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Más opciones (como el bloque de abajo que se ve pro) -->
+    <section class="header-card" style="margin-top:1rem;">
+      <div>
+        <p class="kicker">Más opciones</p>
+        <h3 style="margin:.2rem 0 .4rem 0;">Pregunta por nuestros otros servicios</h3>
+        <p class="sub">Cajitas, impresión adicional y más. Te orientamos según tu evento o negocio.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" target="_blank" rel="noopener"
+           href="https://api.whatsapp.com/send/?phone=%2B5215547235550&text=Hola%2C%20quiero%20informes%20de%20otros%20servicios%20(cajitas%2C%20impresi%C3%B3n%2C%20etc).&app_absent=0">
           Pedir informes
         </a>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer role="contentinfo">
     <div class="container">
       <div class="footer-inner">
         <div>
           <p><strong>Abanicos y Promocionales S.A. de C.V.</strong></p>
-          <p>Ciudad Lago, Nezahualcoyotl, Estado de México</p>
-          <p>Correo: <a href="mailto:ci180785@gmail.com">ci180785@gmail.com</a></p>
+          <p>Colonia Progresista, Iztapalapa, Ciudad de México</p>
+          <p>Correo: <a href="mailto:ci180785@gmail.com">abanpromo@gmail.com</a></p>
         </div>
-        <div class="footer-links" aria-label="Enlaces">
+        <div class="footer-links">
           <a class="btn" href="https://instagram.com/abanicosy_promocinales?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener">Instagram</a>
           <a class="btn" href="https://www.facebook.com/profile.php?id=100063236768738" target="_blank" rel="noopener">Facebook</a>
-          <a class="btn btn-primary" href="https://api.whatsapp.com/send/?phone=%2B5215547235550&text&app_absent=0" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-primary"
+             href="https://api.whatsapp.com/send/?phone=%2B5215547235550&text=Hola%2C%20quiero%20cotizar%20por%20favor.&app_absent=0"
+             target="_blank" rel="noopener">WhatsApp</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- WhatsApp floating -->
-  <a class="wa" href="https://api.whatsapp.com/send/?phone=%2B5215547235550&text&app_absent=0" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
-    <span class="sr-only">WhatsApp</span>
-    <!-- icono simple -->
-    ✆
+  <a class="wa" href="https://api.whatsapp.com/send/?phone=%2B5215547235550&text=Hola%2C%20quiero%20cotizar%20por%20favor.&app_absent=0"
+     target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <span class="sr-only">WhatsApp</span>WA
   </a>
 
-  <script>
-    // Mobile menu toggle (sin jQuery)
-    const burger = document.getElementById("burger");
-    const drawer = document.getElementById("drawer");
-
-    burger?.addEventListener("click", () => {
-      const isOpen = drawer.classList.toggle("open");
-      burger.setAttribute("aria-expanded", String(isOpen));
-    });
-  </script>
+  <script src="js/app.js"></script>
 </body>
 </html>
